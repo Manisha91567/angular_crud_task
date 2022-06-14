@@ -53,6 +53,12 @@ export class AppComponent {
     if(this.dataSource.some(({ id }) => id === row_obj.id)){
       alert("This id is already used");
     }
+
+   
+    if (/[^a-zA-Z]/.test(row_obj.name)){
+      alert("Enter only alphabates");
+      
+    }
   
   else if(row_obj.age>=1 && row_obj.age<=99 ){ 
     this.dataSource.push({
